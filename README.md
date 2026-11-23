@@ -1,5 +1,7 @@
 # Cladex
 
+**English** | [Русский](README.ru.md) | [Deutsch](README.de.md) | [Français](README.fr.md) | [Español](README.es.md) | [Italiano](README.it.md) | [简体中文](README.zh-Hans.md) | [繁體中文](README.zh-Hant.md) | [日本語](README.ja.md) | [한국어](README.ko.md)
+
 Cladex is a remote control for the AI agents that work on your own computers, shown on the Even G2 glasses.
 
 - You install a program on each computer where your AI agents work. It is a Mac app with its own window.
@@ -122,7 +124,7 @@ In Cladex open Settings, the "Removal" group, "Remove Cladex from this computer.
 - No analytics, no advertising, no tracking.
 - Your voice goes only to your own computer and from it to the speech service with your own key.
 
-Full text: [PRIVACY.md](PRIVACY.md). Terms of use: [TERMS.md](TERMS.md). Russian: [README.ru.md](README.ru.md).
+Full text: [PRIVACY.md](PRIVACY.md). Terms of use: [TERMS.md](TERMS.md).
 
 ## About
 

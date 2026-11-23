@@ -1,5 +1,7 @@
 # Cladex
 
+[English](README.md) | **Русский** | [Deutsch](README.de.md) | [Français](README.fr.md) | [Español](README.es.md) | [Italiano](README.it.md) | [简体中文](README.zh-Hans.md) | [繁體中文](README.zh-Hant.md) | [日本語](README.ja.md) | [한국어](README.ko.md)
+
 Cladex - пульт для ИИ-агентов, которые работают на ваших компьютерах, с показом на очках Even G2.
 
 - Вы ставите программу на каждый компьютер, где работают ваши ИИ-агенты. Это приложение для Mac со своим окном.
@@ -122,7 +124,7 @@ irm https://github.com/vsiioky/cladex/releases/latest/download/install.ps1 | iex
 - Нет аналитики, рекламы и слежения.
 - Ваш голос уходит только на ваш компьютер и с него в сервис распознавания речи с вашим собственным ключом.
 
-Полный текст: [PRIVACY.ru.md](PRIVACY.ru.md). Условия использования: [TERMS.ru.md](TERMS.ru.md). English: [README.md](README.md).
+Полный текст: [PRIVACY.ru.md](PRIVACY.ru.md). Условия использования: [TERMS.ru.md](TERMS.ru.md).
 
 ## О проекте
 
