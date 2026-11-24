@@ -114,7 +114,9 @@ The Cladex app for the glasses is in the Even beta channel. It is there by invit
 
 ## Update
 
-Run the install line of your computer again: on a Mac a running Cladex must be quit first, and the older copy is replaced. Your settings and your phones stay.
+Run the install line of your computer again: on a Mac a running Cladex must be quit first, and the older copy is replaced. On Linux and Windows `cladex update` does the same by itself: it downloads the latest release, checks its checksum, puts it next to the running copy and restarts the service, and if the new version does not answer, the service goes back to the previous one. Your settings and your phones stay.
+
+Once a day Cladex asks GitHub whether there is a newer release (GitHub sees your address on the internet and the version of Cladex, nothing else), and `cladex status` tells you when there is. `cladex update check off` turns this check off and `cladex update check on` turns it on again. While the check is off, fixes of security problems and bugs do not arrive, nothing tells you about a new version, and the app on the glasses, which updates itself through Even, may stop understanding an old version on the computer. Cladex installs a new version by itself only after you allow it with `cladex update auto on`; `cladex update auto off` forbids it again. `cladex update status` shows all of it.
 
 ## Remove
 

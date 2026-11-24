@@ -114,7 +114,9 @@ L’application Cladex pour les lunettes est dans le canal bêta d’Even. Elle 
 
 ## Mise à jour
 
-Exécutez de nouveau la ligne d’installation de votre ordinateur : sur un Mac, un Cladex en cours d’exécution doit d’abord être quitté, et l’ancienne copie est remplacée. Vos réglages et vos téléphones restent.
+Exécutez de nouveau la ligne d’installation de votre ordinateur : sur un Mac, un Cladex en cours d’exécution doit d’abord être quitté, et l’ancienne copie est remplacée. Sous Linux et Windows, `cladex update` fait la même chose tout seul : il télécharge la dernière version, vérifie sa somme de contrôle, la place à côté de la copie en cours et redémarre le service ; si la nouvelle version ne répond pas, le service revient tout seul à la précédente. Vos réglages et vos téléphones restent.
+
+Une fois par jour, Cladex demande à GitHub s’il existe une version plus récente (GitHub voit votre adresse sur Internet et la version de Cladex, rien d’autre), et `cladex status` vous le dit quand il y en a une. `cladex update check off` désactive cette vérification et `cladex update check on` la réactive. Tant que la vérification est désactivée, les correctifs de sécurité et de bogues n’arrivent pas, rien ne vous signale une nouvelle version, et l’application des lunettes, qui se met à jour toute seule via Even, peut ne plus comprendre une ancienne version sur l’ordinateur. Cladex n’installe une nouvelle version tout seul qu’après votre autorisation avec `cladex update auto on` ; `cladex update auto off` l’interdit de nouveau. `cladex update status` montre tout cela.
 
 ## Suppression
 

@@ -43,7 +43,8 @@ The Cladex program keeps its configuration, the list of approved phones (with th
 
 ## Installing, links and the support page
 
-- The install line downloads Cladex from GitHub (github.com/vsiioky/cladex) and, on Linux and Windows, Node.js from nodejs.org. Those sites see the request as they see any download. After that the program contacts neither of them by itself: it does not check for updates on its own.
+- The install line downloads Cladex from GitHub (github.com/vsiioky/cladex) and, on Linux and Windows, Node.js from nodejs.org. Those sites see the request as they see any download.
+- Once a day the program on your computer asks GitHub for the latest release of Cladex (one request to api.github.com about the repository github.com/vsiioky/cladex), unless you turn this check off with `cladex update check off`. GitHub sees the address of your internet connection and the version of Cladex in the User-Agent header ("Cladex/" and the version), as it sees any request. Nothing else is sent: no account, no token, no identifier of you or of your computer, and the developer receives nothing. The program downloads a new version from GitHub only when you run `cladex update`, or when you have allowed automatic installs with `cladex update auto on` (they stay off until you allow them). The check and the downloads go from the computer, never from the phone or the glasses.
 - Buttons and links that lead to a web page (the download page of Tailscale or of an AI agent, the Issues of this repository, the support page ko-fi.com/cladex) open that page in your browser only when you press them. Nothing is sent to those sites otherwise.
 - Supporting the project is voluntary and happens on Ko-fi under its own terms. The app for the glasses carries no request for support.
 
@@ -64,6 +65,7 @@ The Cladex program keeps its configuration, the list of approved phones (with th
 - On any computer you set up, run `cladex device revoke <phone name>`, or use the list of phones in the Cladex app for Mac. The phone's token stops working at once on that computer, and the other computers learn it from the shared list.
 - On the phone, remove a computer in the app's settings, or uninstall the app.
 - To stop push, turn it off on the computer.
+- To stop the daily check for a new version, run `cladex update check off` on the computer.
 - To remove Cladex from a computer, run `cladex uninstall`: it removes the service, the hooks in the settings of Claude, the keys, the addresses in Tailscale and the data folder.
 
 ## Children, changes, contact

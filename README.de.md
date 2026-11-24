@@ -51,7 +51,7 @@ Was Sie danach sehen: Das Cladex-Fenster öffnet sich und führt Sie Schritt fü
 
 Was das Skript tut: Es lädt das Festplattenabbild herunter, prüft dessen Prüfsumme, dessen Signatur und dessen Notarisierung durch Apple, kopiert Cladex.app in Programme, wirft das Abbild aus und öffnet Cladex. Bis die Prüfungen bestanden sind, ändert es nichts. Wenn /Applications nicht beschreibbar ist, nimmt es den Ordner Programme in Ihrem Home-Ordner und sagt das. Läuft Cladex gerade, bittet es Sie, das Programm zuerst zu beenden. Optionen: `--no-open`, `--dir <folder>`, `--help` (nach der Zeile: `| sh -s -- --no-open`).
 
-Von Hand: Öffnen Sie https://github.com/vsiioky/cladex/releases, laden Sie cladex-arm64.dmg herunter, öffnen Sie die Datei, ziehen Sie Cladex in Programme und öffnen Sie es von dort. Auf derselben Seite liegt SHA256SUMS zum Vergleich der Pr��fsumme (`shasum -a 256 cladex-arm64.dmg`).
+Von Hand: Öffnen Sie https://github.com/vsiioky/cladex/releases, laden Sie cladex-arm64.dmg herunter, öffnen Sie die Datei, ziehen Sie Cladex in Programme und öffnen Sie es von dort. Auf derselben Seite liegt SHA256SUMS zum Vergleich der Prüfsumme (`shasum -a 256 cladex-arm64.dmg`).
 
 Status: geprüft auf einem echten Mac mit dem signierten und notarisierten Festplattenabbild des Releases.
 
@@ -114,7 +114,9 @@ Die Cladex-App für die Brille ist im Beta-Kanal von Even. Sie ist dort nur auf 
 
 ## Update
 
-Führen Sie die Installationszeile Ihres Computers erneut aus: Auf dem Mac muss ein laufendes Cladex zuerst beendet werden, und die ältere Kopie wird ersetzt. Ihre Einstellungen und Ihre Telefone bleiben erhalten.
+Führen Sie die Installationszeile Ihres Computers erneut aus: Auf dem Mac muss ein laufendes Cladex zuerst beendet werden, und die ältere Kopie wird ersetzt. Unter Linux und Windows tut `cladex update` dasselbe von selbst: Es lädt die neueste Version herunter, prüft ihre Prüfsumme, legt sie neben die laufende Kopie und startet den Dienst neu; antwortet die neue Version nicht, geht der Dienst von selbst zur vorherigen zurück. Ihre Einstellungen und Ihre Telefone bleiben erhalten.
+
+Einmal am Tag fragt Cladex GitHub, ob es eine neuere Version gibt (GitHub sieht Ihre Adresse im Internet und die Version von Cladex, sonst nichts), und `cladex status` sagt Ihnen, wenn es eine gibt. `cladex update check off` schaltet diese Prüfung aus, `cladex update check on` schaltet sie wieder ein. Solange die Prüfung aus ist, kommen Korrekturen für Sicherheitslücken und Fehler nicht an, nichts sagt Ihnen, dass es eine neue Version gibt, und die App auf der Brille, die sich selbst über Even aktualisiert, versteht eine alte Version auf dem Computer womöglich nicht mehr. Cladex installiert eine neue Version nur von selbst, wenn Sie es mit `cladex update auto on` erlauben; `cladex update auto off` verbietet es wieder. `cladex update status` zeigt alles.
 
 ## Entfernen
 

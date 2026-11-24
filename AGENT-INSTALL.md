@@ -211,7 +211,11 @@ Tell the human what is next: put on the glasses, open Cladex from the Even menu 
 
 ## Update
 
-There is no update command for an agent today. Run the install line of Step 3 again (a Mac needs Cladex quit first; Linux and Windows run setup again by themselves unless you keep `--no-setup`). On a Mac use `--no-open`, repeat the Node.js lines of Step 3 (not `core install`), then run setup from the new program, which installs the new core and restarts the services:
+On Linux and Windows use the command. First `cladex update --print`, which only says what it would do, then `cladex update`: it downloads the latest release, checks its checksum, puts it next to the running copy and restarts the service; if the new version does not answer, the service goes back to the previous one by itself. Exit 0 means updated or already the latest. `cladex update status --json` shows the version, the latest release known and whether the daily check is on.
+
+Once a day Cladex asks GitHub for the latest release, unless the human turned that off. Turning it off (`cladex update check off`) and letting Cladex install new versions by itself (`cladex update auto on`) are choices of the human: STOP and ask the human before you run either, and say what the first one costs: fixes of security problems and bugs do not arrive, and nothing tells about a new version.
+
+On a Mac the Cladex program carries its own core, so `cladex update` refuses there. Run the install line of Step 3 again (a Mac needs Cladex quit first) with `--no-open`, repeat the Node.js lines of Step 3 (not `core install`), then run setup from the new program, which installs the new core and restarts the services:
 
 ```sh
 "$HOME/.g2-claude/runtime/current/bin/node" "$RES/core/cladex-cli.mjs" setup --yes
