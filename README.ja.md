@@ -118,6 +118,8 @@ Macでは、Cladexのウィンドウが次のステップをそのつど示し�
 
 Cladexは1日に1回、新しいリリースがあるかをGitHubに尋ね（GitHubに見えるのは、インターネット上のあなたのアドレスとCladexのバージョンだけです）、あるときは `cladex status` で知らせます。`cladex update check off` でこの確認をオフにし、`cladex update check on` で再びオンにします。確認がオフの間は、セキュリティ問題や不具合の修正は届かず、新しいバージョンがあっても何も知らせてくれません。また、Even を通じて自動で更新されるグラスのアプリが、コンピュータ上の古いバージョンを理解できなくなることがあります。Cladexが新しいバージョンを自動でインストールするのは、`cladex update auto on` で許可した場合だけです。`cladex update auto off` でもう一度禁止できます。`cladex update status` でこれらをすべて確認できます。
 
+各バージョンの変更点（英語）：[CHANGELOG.md](CHANGELOG.md)。
+
 ## 削除
 
 Cladexで設定を開き、「削除」グループの「このコンピュータからCladexを削除...」を選びます。またはターミナルで`cladex uninstall`を実行します。Cladexがインストールしたものがすべて削除されます(サービス、フック、設定、キー、ログ)。そのあと、Cladex.appをゴミ箱に移します。Tailscaleとご利用のAIエージェントは残ります。

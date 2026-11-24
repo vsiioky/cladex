@@ -118,6 +118,8 @@ Exécutez de nouveau la ligne d’installation de votre ordinateur : sur un Mac,
 
 Une fois par jour, Cladex demande à GitHub s’il existe une version plus récente (GitHub voit votre adresse sur Internet et la version de Cladex, rien d’autre), et `cladex status` vous le dit quand il y en a une. `cladex update check off` désactive cette vérification et `cladex update check on` la réactive. Tant que la vérification est désactivée, les correctifs de sécurité et de bogues n’arrivent pas, rien ne vous signale une nouvelle version, et l’application des lunettes, qui se met à jour toute seule via Even, peut ne plus comprendre une ancienne version sur l’ordinateur. Cladex n’installe une nouvelle version tout seul qu’après votre autorisation avec `cladex update auto on` ; `cladex update auto off` l’interdit de nouveau. `cladex update status` montre tout cela.
 
+Ce qui a changé dans chaque version (en anglais) : [CHANGELOG.md](CHANGELOG.md).
+
 ## Suppression
 
 Dans Cladex, ouvrez Réglages, le groupe « Suppression », « Supprimer Cladex de cet ordinateur... ». Ou, dans le Terminal, exécutez `cladex uninstall` : il supprime tout ce que Cladex a installé (le service, les hooks, les réglages, les clés, les journaux). Mettez ensuite Cladex.app à la Corbeille. Tailscale et vos agents d’IA restent.

@@ -118,6 +118,8 @@ irm https://github.com/vsiioky/cladex/releases/latest/download/install.ps1 | iex
 
 Cladex 每天向 GitHub 詢問一次是否有更新的發行版（GitHub 只看得到你在網際網路上的位址和 Cladex 的版本，其他都看不到），有的話 `cladex status` 會告訴你。`cladex update check off` 關閉這項檢查，`cladex update check on` 重新開啟。檢查關閉期間，安全問題與錯誤的修正不會送達，也不會有任何東西告訴你有新版本，而眼鏡上透過 Even 自動更新的應用程式，可能無法再辨識電腦上的舊版本。只有你用 `cladex update auto on` 允許之後，Cladex 才會自己安裝新版本；`cladex update auto off` 可以再次禁止。`cladex update status` 會顯示以上全部。
 
+每個版本的變化（英文）：[CHANGELOG.md](CHANGELOG.md)。
+
 ## 移除
 
 在 Cladex 裡打開設定，找到「移除」群組，按「從這台電腦移除 Cladex...」。或者在終端機裡執行 `cladex uninstall`：它會移除 Cladex 安裝的所有東西（服務、掛鉤、設定、金鑰、記錄）。然後把 Cladex.app 移到垃圾桶。Tailscale 和你的 AI 代理程式都會保留。

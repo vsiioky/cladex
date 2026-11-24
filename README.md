@@ -118,6 +118,8 @@ Run the install line of your computer again: on a Mac a running Cladex must be q
 
 Once a day Cladex asks GitHub whether there is a newer release (GitHub sees your address on the internet and the version of Cladex, nothing else), and `cladex status` tells you when there is. `cladex update check off` turns this check off and `cladex update check on` turns it on again. While the check is off, fixes of security problems and bugs do not arrive, nothing tells you about a new version, and the app on the glasses, which updates itself through Even, may stop understanding an old version on the computer. Cladex installs a new version by itself only after you allow it with `cladex update auto on`; `cladex update auto off` forbids it again. `cladex update status` shows all of it.
 
+What changed in each version: [CHANGELOG.md](CHANGELOG.md).
+
 ## Remove
 
 In Cladex open Settings, the "Removal" group, "Remove Cladex from this computer...". Or in the Terminal run `cladex uninstall`: it removes everything Cladex installed (the service, the hooks, the settings, the keys, the logs). Then move Cladex.app to the Trash. Tailscale and your AI agents stay.

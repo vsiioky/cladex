@@ -118,6 +118,8 @@ Mac에서는 Cladex 창이 다음 단계를 그때그때 알려 줘요. Linux와
 
 Cladex는 하루에 한 번 GitHub에 더 새로운 릴리스가 있는지 물어보고(GitHub에는 인터넷상의 내 주소와 Cladex 버전만 보여요), 있으면 `cladex status` 가 알려 줘요. `cladex update check off` 로 이 확인을 끄고, `cladex update check on` 으로 다시 켤 수 있어요. 확인이 꺼져 있는 동안에는 보안 문제와 오류의 수정이 도착하지 않고, 새 버전이 나와도 아무것도 알려 주지 않으며, Even 을 통해 스스로 업데이트되는 안경 앱이 컴퓨터의 오래된 버전을 더 이상 이해하지 못할 수 있어요. Cladex는 `cladex update auto on` 으로 허용했을 때만 새 버전을 스스로 설치해요. `cladex update auto off` 로 다시 금지할 수 있어요. `cladex update status` 로 이 모든 것을 볼 수 있어요.
 
+각 버전의 변경 내용(영어): [CHANGELOG.md](CHANGELOG.md).
+
 ## 제거
 
 Cladex에서 설정을 열고 "제거" 그룹의 "이 컴퓨터에서 Cladex 제거..."를 눌러요. 또는 터미널에서 `cladex uninstall`을 실행해요. Cladex가 설치한 모든 것(서비스, 훅, 설정, 키, 로그)이 제거돼요. 그다음 Cladex.app을 휴지통으로 옮겨요. Tailscale과 AI 에이전트는 그대로 남아요.

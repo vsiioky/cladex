@@ -118,6 +118,8 @@ Führen Sie die Installationszeile Ihres Computers erneut aus: Auf dem Mac muss 
 
 Einmal am Tag fragt Cladex GitHub, ob es eine neuere Version gibt (GitHub sieht Ihre Adresse im Internet und die Version von Cladex, sonst nichts), und `cladex status` sagt Ihnen, wenn es eine gibt. `cladex update check off` schaltet diese Prüfung aus, `cladex update check on` schaltet sie wieder ein. Solange die Prüfung aus ist, kommen Korrekturen für Sicherheitslücken und Fehler nicht an, nichts sagt Ihnen, dass es eine neue Version gibt, und die App auf der Brille, die sich selbst über Even aktualisiert, versteht eine alte Version auf dem Computer womöglich nicht mehr. Cladex installiert eine neue Version nur von selbst, wenn Sie es mit `cladex update auto on` erlauben; `cladex update auto off` verbietet es wieder. `cladex update status` zeigt alles.
 
+Was sich in jeder Version geändert hat (auf Englisch): [CHANGELOG.md](CHANGELOG.md).
+
 ## Entfernen
 
 Öffnen Sie in Cladex die Einstellungen, die Gruppe „Entfernen“, „Cladex von diesem Computer entfernen ...“. Oder führen Sie im Terminal `cladex uninstall` aus: Es entfernt alles, was Cladex installiert hat (den Dienst, die Hooks, die Einstellungen, die Schlüssel, die Protokolle). Ziehen Sie dann Cladex.app in den Papierkorb. Tailscale und Ihre KI-Agenten bleiben.
