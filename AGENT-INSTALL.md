@@ -142,7 +142,7 @@ Before the next command, STOP and ask the human, in their language: "Next I make
 cladex gateway publish --yes
 ```
 
-Success: "The computer's address on the internet: https://..." Write the address down. It can take up to 10 minutes to open from the internet. If Tailscale refuses (exit 2, or a text with a link: Funnel not allowed, HTTPS certificates or MagicDNS off), STOP and ask the human to do it once in the Tailscale admin console and say when done: open the link the command printed, or https://console.tailscale.com/admin/dns (MagicDNS on, then "Enable HTTPS") and https://console.tailscale.com/admin/acls (section Funnel, "Add Funnel to policy"). Only an owner or administrator of that Tailscale network can; do not edit the policy file yourself. Then repeat the command. Check with `cladex status`.
+Success: "The computer's address on the internet: https://..." Write the address down. Do not wait for it and do not poll it: Tailscale publishes an address within 10 minutes, and the phone is the check (Step 9). If the phone says the computer is not found, tell the human to wait a minute and enter the code again. `cladex status` says "published N min ago, not reached from the internet yet" until the first request from the internet reaches the computer, and then "works: a request from the internet reached this computer at ...": the first is a note, not a fault. If Tailscale refuses (exit 2, or a text with a link: Funnel not allowed, HTTPS certificates or MagicDNS off), STOP and ask the human to do it once in the Tailscale admin console and say when done: open the link the command printed, or https://console.tailscale.com/admin/dns (MagicDNS on, then "Enable HTTPS") and https://console.tailscale.com/admin/acls (section Funnel, "Add Funnel to policy"). Only an owner or administrator of that Tailscale network can; do not edit the policy file yourself. Then repeat the command.
 
 ## Step 6. The AI agents
 
@@ -150,7 +150,7 @@ Success: "The computer's address on the internet: https://..." Write the address
 cladex product list
 ```
 
-Claude Code and Codex turn on by themselves when found ("running"). A product found but "needs your yes" is Hermes or OpenClaw. For each, STOP and ask the human to read and answer yes or no: "Hermes in yolo mode runs commands without asking you; a phone can use it only after you allow that phone, and put a session in that mode only while a separate switch is on. OpenClaw's token equals an administrator's: whoever holds it controls OpenClaw completely; Cladex holds it in memory and does not write it to its settings. Turn it on for the glasses on this computer?" Only on yes:
+Claude Code and Codex turn on by themselves when found ("running"). A product found but "needs your yes" is Hermes or OpenClaw. For each, STOP and ask the human to read and answer yes or no: "Hermes in yolo mode runs commands without asking you; a phone can put a session in that mode only while a separate switch is on, which stays off. OpenClaw's token equals an administrator's: whoever holds it controls OpenClaw completely; Cladex holds it in memory and does not write it to its settings. Turning either on opens it to every phone connected to this computer, now and later; you can close it for one phone afterwards. Turn it on for the glasses on this computer?" Only on yes:
 
 ```sh
 cladex product enable hermes --yes
@@ -187,16 +187,16 @@ STOP and ask the human whether they have the Even app on the phone, signed in, w
 Open a code for the phone (it needs the address of Step 5). Run it in the background and read its output, because it waits up to 10 minutes:
 
 ```sh
-cladex pair --products claude,codex
+cladex pair
 ```
 
-Add `hermes` or `openclaw` to `--products` only if the human agreed in Step 6. It prints "Code for the phone: <8 digits>" and the address of the computer on a line of its own. Tell the human both: in the Cladex app in Even, enter the address and the 8 digits; the phone then shows 3 digits. When the output says "The phone ... entered the code" and prints `cladex pair confirm <pairing> <digits>`, STOP and ask the human for the 3 digits shown on the phone (not a secret), then run that command with them:
+It ticks every product that is on, so Hermes and OpenClaw are open to the phone only if the human agreed in Step 6. Add `--products claude,codex` only if the human asks to keep one phone to those two. It prints "Code for the phone: <8 digits>" and the address of the computer on a line of its own. Tell the human both: in the Cladex app in Even, enter the address and the 8 digits; the phone then shows 3 digits. When the output says "The phone ... entered the code" and prints `cladex pair confirm <pairing> <digits>`, STOP and ask the human for the 3 digits shown on the phone (not a secret), then run that command with them:
 
 ```sh
 cladex pair confirm <pairing> <digits>
 ```
 
-Success: "The phone ... is connected". Wrong digits: it says the tries left. "The code has expired": run `cladex pair` again, at most twice. "no address on the internet": go back to Step 5. If you cannot run a command in the background, STOP and ask the human to run `cladex pair` in their own terminal: it asks for the 3 digits itself. If the output asks to put the phone on the list of Hermes or OpenClaw (`cladex product allow-phone <phone> hermes`), run it only if the human agreed.
+Success: "The phone ... is connected". Wrong digits: it says the tries left. "The code has expired": run `cladex pair` again, at most twice. "no address on the internet": go back to Step 5. If you cannot run a command in the background, STOP and ask the human to run `cladex pair` in their own terminal: it asks for the 3 digits itself. Nothing more is needed for Hermes or OpenClaw. If the human wants one closed to this phone, `cladex product disallow-phone <phone> hermes` does it (`allow-phone` opens it again); run it only when asked.
 
 ## Step 10. Check and hand over
 
@@ -205,7 +205,7 @@ cladex status
 cladex doctor
 ```
 
-Both only look. Success: "This computer: ready". A line marked `!!` has a `fix:` under it: do it only if it lies inside these steps, otherwise show it to the human. Lines marked `>>` are steps of the human. On Linux `doctor` may ask for `sudo loginctl enable-linger $USER` (so the services keep running after sign-out): STOP and ask the human to run it themselves.
+Both only look. Success: "This computer: ready". A line marked `!!` has a `fix:` under it: do it only if it lies inside these steps, otherwise show it to the human. The note "not reached from the internet yet" about the address is no fault: the phone of Step 9 settles it. Lines marked `>>` are steps of the human. On Linux `doctor` may ask for `sudo loginctl enable-linger $USER` (so the services keep running after sign-out): STOP and ask the human to run it themselves.
 
 Tell the human what is next: put on the glasses, open Cladex from the Even menu of the glasses; if it says "No computers", tap the glasses screen. On a Mac the window opens with `open -a Cladex` (from the install folder if not in /Applications): it asks for its language once and then shows the ready home.
 
