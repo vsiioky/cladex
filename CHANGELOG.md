@@ -2,6 +2,13 @@
 
 What changed in each version of Cladex, newest first. [Russian](CHANGELOG.ru.md)
 
+## 0.1.6 - 2026-11-24
+
+- OpenClaw models appear by themselves after OpenClaw restarts.
+- An old shared Codex service is named as such and can be updated with one button (`cladex product update codex`).
+- When something is wrong, the window shows a page that describes the problem instead of the first setup.
+- Commands in the window are buttons, and commands in Help are copied with one click.
+
 ## 0.1.5 - 2026-11-24
 
 - The list of sessions on the phone and the glasses names each session by its title, its last answer or your first request.
