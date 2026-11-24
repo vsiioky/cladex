@@ -2,6 +2,13 @@
 
 What changed in each version of Cladex, newest first. [Russian](CHANGELOG.ru.md)
 
+## 0.1.5 - 2026-11-24
+
+- The list of sessions on the phone and the glasses names each session by its title, its last answer or your first request.
+- Sessions of one folder no longer all read as the folder name.
+- A session started from the app is named by the first words of your task.
+- Codex, Hermes and OpenClaw sessions without a name are no longer named by an id or by a word such as main.
+
 ## 0.1.4 - 2026-11-24
 
 - The program shows what is new: before an update in Settings, Updates, and once after it on the main screen.
