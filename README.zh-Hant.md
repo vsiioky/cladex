@@ -2,6 +2,8 @@
 
 [English](README.md) | [Русский](README.ru.md) | [Deutsch](README.de.md) | [Français](README.fr.md) | [Español](README.es.md) | [Italiano](README.it.md) | [简体中文](README.zh-Hans.md) | **繁體中文** | [日本語](README.ja.md) | [한국어](README.ko.md)
 
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/cladex)
+
 Cladex 是一個遙控器，用 Even G2 眼鏡查看並控制在你自己的電腦上工作的 AI 代理程式。
 
 - 你在每台執行 AI 代理程式的電腦上安裝一個程式。它是有自己視窗的 Mac app。
@@ -12,15 +14,15 @@ Cladex 是一個遙控器，用 Even G2 眼鏡查看並控制在你自己的電�
 
 ## 讓你的 AI 代理程式來安裝
 
-如果你在這台電腦上使用的 AI 代理程式可以使用終端機（Claude Code、Codex、Hermes、OpenClaw 或其他），可以讓它來完成安裝。把下面這段文字複製給代理程式：
+如果你在這台電腦上使用的 AI 代理程式可以使用終端機���Claude Code、Codex、Hermes、OpenClaw 或其他），可以讓它來完成安裝。把下面這段文字複製給代理程式：
 
 ```
 Install Cladex on this computer. Read https://raw.githubusercontent.com/vsiioky/cladex/main/AGENT-INSTALL.md and follow it step by step. Stop and ask me where it says so. Answer me in Traditional Chinese.
 ```
 
-代理程式會從這個儲存庫下載 Cladex，完成設定，並自行把你的代理程式和手機連起來。遇到只有你才能繼續的地方，它會停下來詢問：登入 Tailscale、把電腦的網址開放到網際網路（動手之前會先問你）、Hermes 和 OpenClaw（需要你同意）、語音金鑰（你在隱藏輸入的提示裡自己輸入，絕不會寫進聊天）、Claude app 裡的調度器，以及手機上的連結碼。它從不使用管理員權限。
+代理程式會從這個儲存庫下載 Cladex，完成設定，並自行把你的代理程式和手機連起來。遇到只有你才能繼續的地方，它會停���來詢問：登入 Tailscale、把電腦的網址開放到網際網路（動手之前會先問你）、Hermes 和 OpenClaw（需要你同意）、語音金鑰（你在隱藏輸入的提示裡自己輸入，絕不會寫進聊天）、Claude app 裡的調度器，以及手機上的連結碼。它從不使用管理員權限。
 
-請先閱讀 [AGENT-INSTALL.md](AGENT-INSTALL.md)：它很短，代理程式正是照著它來做。對於無法連上網際網路的代理程式，可以直接把這個檔案交給它，而不是給它網址。
+請先閱讀 [AGENT-INSTALL.md](AGENT-INSTALL.md)：它很短，代理程式正是照著它來做。對於無法連上網際網路的代理程式，可以直接把這個檔案交給��，而不是給它網址。
 
 ## 你需要準備什麼
 
@@ -39,7 +41,7 @@ Install Cladex on this computer. Read https://raw.githubusercontent.com/vsiioky/
 curl -fsSL https://github.com/vsiioky/cladex/releases/latest/download/install.sh | sh
 ```
 
-執行方式：
+執行��式：
 
 1. 按 Cmd+空白鍵，輸入「終端機」（Terminal），然後按 Enter。會打開一個有文字輸入列的視窗。
 2. 複製上面的指令，貼到這個視窗裡（Cmd+V），然後按 Enter。
@@ -69,7 +71,7 @@ curl -fsSL https://github.com/vsiioky/cladex/releases/latest/download/install.sh
 2. 複製上面的指令，貼上（Ctrl+Shift+V），然後按 Enter。
 3. 回答同一視窗裡出現的問題。你回答之前不會有任何更動。
 
-接下來你會看到：沒有視窗。腳本把 Cladex 放在 ~/.g2-claude 底下，把 `cladex` 指令加入你的路徑，並啟動 `cladex setup`，它會在終端機裡提問。結束後，依序執行這些指令：`cladex gateway init`，然後 `cladex gateway publish`，再 `cladex pair`（它會印出電腦的網址和一組連結碼）。如果只想安裝，在 `| sh -s --` 後面加上 `--no-setup`。它需要 curl、tar、gzip 和 xz（套件 xz-utils），從不使用 sudo，並會自己下載 Node.js 22 並檢查其檢查碼。
+接下來你會看到：沒有視窗。腳本把 Cladex 放在 ~/.g2-claude 底下，把 `cladex` 指令加入你的路徑，並啟動 `cladex setup`，它會���終端機裡提問。結束後，依序執行這些指令：`cladex gateway init`，然後 `cladex gateway publish`，再 `cladex pair`（它會印出電腦的網址和一組連結碼）。如果只想安裝，在 `| sh -s --` 後面加上 `--no-setup`。它需要 curl、tar、gzip 和 xz（套件 xz-utils），從不使用 sudo，並會自己下載 Node.js 22 並檢查其檢查碼。
 
 狀態：預覽版。已在 Debian 容器（arm64）裡測試：安裝、`cladex --version` 和 `cladex setup --print`。尚未在真實的 Linux 電腦、真實的服務（systemd）、Tailscale 或代理程式上測試。
 
@@ -107,7 +109,7 @@ irm https://github.com/vsiioky/cladex/releases/latest/download/install.ps1 | iex
 ## 連結手機
 
 1. 在電腦上的 Cladex 裡按「連結手機」：會出現電腦的網址和一組 8 位數連結碼。
-2. 在手機上 Even app 裡的 Cladex app 中輸入網址和連結碼，然後輸入電腦上顯示的 3 位數。
+2. ���手機上 Even app 裡的 Cladex app 中輸入網址和連結碼，然後輸入電腦上顯示的 3 位數。
 3. 戴上眼鏡。如果顯示「沒有電腦」，點一下眼鏡的畫面：清單會重新檢查。
 
 ## 更新
@@ -116,7 +118,7 @@ irm https://github.com/vsiioky/cladex/releases/latest/download/install.ps1 | iex
 
 ## 移除
 
-在 Cladex 裡打開設定，找到「移除」群組，按「從這台電腦移除 Cladex...」。或者在終端機裡執行 `cladex uninstall`：它會移除 Cladex 安裝的所有東西（服務、掛鉤、設定、金鑰、記錄）。然後把 Cladex.app 移到垃圾桶。Tailscale 和你的 AI 代理程式都會保留。
+在 Cladex 裡打開設定，找到「移除」群組，按「從這台電腦移除 Cladex...」。或者在��端機裡執行 `cladex uninstall`：它會移除 Cladex 安裝的所有東西（服務、掛鉤、設定、金鑰、記錄）。然後把 Cladex.app 移到垃圾桶。Tailscale 和你的 AI 代理程式都會保留。
 
 ## 隱私
 

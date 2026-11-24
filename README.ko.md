@@ -2,6 +2,8 @@
 
 [English](README.md) | [Русский](README.ru.md) | [Deutsch](README.de.md) | [Français](README.fr.md) | [Español](README.es.md) | [Italiano](README.it.md) | [简体中文](README.zh-Hans.md) | [繁體中文](README.zh-Hant.md) | [日本語](README.ja.md) | **한국어**
 
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/cladex)
+
 Cladex는 내 컴퓨터에서 일하는 AI 에이전트를 Even G2 안경으로 보면서 조작하는 리모컨이에요.
 
 - AI 에이전트가 일하는 컴퓨터마다 프로그램을 설치해요. 자체 창이 있는 Mac 앱이에요.
@@ -47,11 +49,11 @@ curl -fsSL https://github.com/vsiioky/cladex/releases/latest/download/install.sh
 
 그다음에 보이는 것: Cladex 창이 열리고, 첫 설정을 한 단계씩 안내해 줘요(아래 절 참고).
 
-스크립트가 하는 일: 디스크 이미지를 내려받고, 체크섬과 서명, Apple의 공증을 확인해요. 그런 다음 Cladex.app을 응용 프로그램 폴더에 복사하고, 이미지를 닫고, Cladex를 열어요. 확인을 통과하기 전에는 아무것도 바꾸지 않아요. /Applications에 쓸 수 없으면 홈 폴더의 Applications 폴더를 쓰고 그렇다고 알려 줘요. Cladex가 실행 중이면 먼저 종료하라고 안내해요. 옵션: `--no-open`, `--dir <folder>`, `--help`(줄 뒤에 `| sh -s -- --no-open`처럼 붙여요).
+스크립트가 하는 일: 디스크 이미지를 내려받고, 체크섬과 서명, Apple의 공증을 확인해요. 그런 다음 Cladex.app을 응용 프로그램 폴더에 복사하고, 이미지를 닫고, Cladex를 열어요. 확인을 통과하기 전에는 아무것도 바꾸지 않아요. /Applications에 쓸 수 없으면 홈 폴더의 Applications 폴더를 쓰고 그렇다고 알려 줘요. Cladex가 실�� 중이면 먼저 종료하라고 안내해요. 옵션: `--no-open`, `--dir <folder>`, `--help`(줄 뒤에 `| sh -s -- --no-open`처럼 붙여요).
 
 직접 설치하는 방법: https://github.com/vsiioky/cladex/releases 를 열어 cladex-arm64.dmg를 내려받고, 열어서 Cladex를 응용 프로그램으로 끌어다 놓은 다음 거기서 열어요. 같은 페이지의 SHA256SUMS로 체크섬을 비교할 수 있어요(`shasum -a 256 cladex-arm64.dmg`).
 
-상태: 릴리스의 서명되고 공증된 디스크 이미지로 실제 Mac에서 확인했어요.
+상태: 릴리스의 서명되고 공증된 디���크 이미지로 실제 Mac에서 확인했어요.
 
 ### Intel 칩 Mac
 
@@ -65,7 +67,7 @@ curl -fsSL https://github.com/vsiioky/cladex/releases/latest/download/install.sh
 
 실행 방법:
 
-1. 터미널을 열어요(대부분의 데스크톱에서는 Ctrl+Alt+T, 또는 프로그램 메뉴에서 "터미널"을 찾아요).
+1. 터미널을 열어요(대부분의 데스크톱에서는 Ctrl+Alt+T, 또�� 프로그램 메뉴에서 "터미널"을 찾아요).
 2. 위의 명령을 복사해서 붙여 넣고(Ctrl+Shift+V) Enter를 눌러요.
 3. 같은 창에 나오는 질문에 답해요. 답하기 전에는 아무것도 바뀌지 않아요.
 
@@ -83,9 +85,9 @@ irm https://github.com/vsiioky/cladex/releases/latest/download/install.ps1 | iex
 
 1. 시작 메뉴를 열고 PowerShell을 입력한 다음 Enter를 눌러요("관리자 권한으로 실행"이 아닌 일반 창이에요).
 2. 위의 명령을 복사해서 붙여 넣고(마우스 오른쪽 클릭으로 붙여 넣어져요) Enter를 눌러요.
-3. 같은 창에 나오는 질문에 답해요. 답하기 전에는 아무것도 바뀌지 않아요.
+3. 같은 창에 나오는 질��에 답해요. 답하기 전에는 아무것도 바뀌지 않아요.
 
-그다음에 보이는 것: Cladex 창은 없어요. 스크립트가 Cladex를 사용자 폴더 아래(.g2-claude)에 두고, 명령 폴더를 사용자 경로에 추가한 다음 `cladex setup`을 시작해요. 질문은 PowerShell에 나와요. 끝나면 `cladex gateway init`, `cladex gateway publish`, `cladex pair`를 차례로 실행해요. 설치만 하려면 줄 앞에 `$env:CLADEX_NO_SETUP = '1'`을 설정해요. 관리자 권한은 쓰지 않아요.
+그다음에 보이는 것: Cladex 창은 없어요. 스크립트가 Cladex를 사용자 폴더 아래(.g2-claude)에 두고, 명령 폴더를 사용자 경로에 추가한 다음 `cladex setup`을 시작해요. 질문은 PowerShell에 나와요. 끝나면 `cladex gateway init`, `cladex gateway publish`, `cladex pair`를 차례로 실행해요. 설치만 하려면 줄 앞에 `$env:CLADEX_NO_SETUP = '1'`을 설정해요. 관리자 권한��� 쓰지 않아요.
 
 상태: 미리보기예요. 스크립트는 눈으로 읽고 정적 테스트로만 확인했어요. 실제 Windows 컴퓨터에서는 아직 실행해 보지 않았고, 스크립트를 쓴 컴퓨터의 PowerShell도 구문을 분석하지 않았어요.
 
@@ -96,13 +98,13 @@ Mac에서는 Cladex 창이 다음 단계를 그때그때 알려 줘요. Linux와
 1. Cladex를 열어요. 설치 계획을 읽고 단 하나의 질문에 답해요. 답하기 전에는 아무것도 바뀌지 않아요.
 2. Tailscale(tailscale.com/download/mac)을 설치하고 열어서 로그인해요. 컴퓨터 이름에 내 이름이 들어 있으면 이름을 바꿔요.
 3. 브라우저에서 Tailscale 페이지를 열어요. MagicDNS와 "Enable HTTPS"를 켜고(console.tailscale.com/admin/dns), 정책에 Funnel을 추가해요(console.tailscale.com/admin/acls).
-4. Cladex에서 "주소 공개"를 누르고 컴퓨터 주소를 적어 둬요. name.tailnet.ts.net 같은 모양이고, 인터넷에 나타나기까지 최대 10분이 걸릴 수 있어요.
+4. Cladex에서 "주소 공개"를 누르고 ���퓨터 주소를 적어 둬요. name.tailnet.ts.net 같은 모양이고, 인터넷에 나타나기까지 최대 10분이 걸릴 수 있어요.
 5. 위 목록에서 AI 에이전트를 설치하고 로그인해요. Cladex는 다른 프로그램을 설치하지 않고, "다시 확인"을 누르면 에이전트를 스스로 찾아요. Claude Code라면 창에 한 번만 하는 관리 세션 단계도 나와요.
 6. 음성은 선택이고, ElevenLabs(elevenlabs.io/app/settings/api-keys)나 OpenAI(platform.openai.com/api-keys)의 내 키가 필요해요. Cladex의 설정에 붙여 넣어요.
 
 ## 안경용 앱
 
-안경용 Cladex 앱은 Even 베타 채널에 있어요. Even이 카탈로그에 올릴 때까지는 초대로만 받을 수 있고, 초대는 Even 계정의 이메일로 와요. 초대를 요청하려면 이 저장소(https://github.com/vsiioky/cladex/issues)에 "Beta invitation"이라는 제목으로 issue를 열어 주세요. issue는 공개되니 이메일은 적지 마세요. 답글에서 이메일을 비공개로 보내는 방법을 알려 드려요. 초대를 받으면 휴대폰의 Even 앱에서 베타 빌드를 설치해요.
+안경용 Cladex 앱은 Even 베타 채널에 있어요. Even이 카탈로그에 올릴 때까지는 초대로만 받을 수 있고, 초대는 Even 계정의 이메일로 와요. 초대를 요청하려면 이 저장소(https://github.com/vsiioky/cladex/issues)에 "Beta invitation"이라는 제목으로 issue를 열어 주세요. issue는 공개되니 이메일은 적지 마세요. 답글에서 이메일을 ��공개로 보내는 방법을 알려 드려요. 초대를 받으면 휴대폰의 Even 앱에서 베타 빌드를 설치해요.
 
 ## 휴대폰 연결
 
@@ -116,7 +118,7 @@ Mac에서는 Cladex 창이 다음 단계를 그때그때 알려 줘요. Linux와
 
 ## 제거
 
-Cladex에서 설정을 열고 "제거" 그룹의 "이 컴퓨터에서 Cladex 제거..."를 눌러요. 또는 터미널에서 `cladex uninstall`을 실행해요. Cladex가 설치한 모든 것(서비스, 훅, 설정, 키, 로그)이 제거돼요. 그다음 Cladex.app을 휴지통으로 옮겨요. Tailscale과 AI 에이전트는 그대로 남아요.
+Cladex에서 설정을 열고 "제거" 그룹의 "이 컴퓨터에서 Cladex 제거..."를 눌러요. 또는 터미널에서 `cladex uninstall`을 실행해요. Cladex가 설치한 모든 것(서비스, 훅, 설정, 키, 로그)이 제거돼요. 그다�� Cladex.app을 휴지통으로 옮겨요. Tailscale과 AI 에이전트는 그대로 남아요.
 
 ## 개인정보
 

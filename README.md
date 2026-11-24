@@ -2,6 +2,8 @@
 
 **English** | [Русский](README.ru.md) | [Deutsch](README.de.md) | [Français](README.fr.md) | [Español](README.es.md) | [Italiano](README.it.md) | [简体中文](README.zh-Hans.md) | [繁體中文](README.zh-Hant.md) | [日本語](README.ja.md) | [한국어](README.ko.md)
 
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/cladex)
+
 Cladex is a remote control for the AI agents that work on your own computers, shown on the Even G2 glasses.
 
 - You install a program on each computer where your AI agents work. It is a Mac app with its own window.

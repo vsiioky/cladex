@@ -2,6 +2,8 @@
 
 [English](README.md) | [Русский](README.ru.md) | [Deutsch](README.de.md) | [Français](README.fr.md) | [Español](README.es.md) | [Italiano](README.it.md) | **简体中文** | [繁體中文](README.zh-Hant.md) | [日本語](README.ja.md) | [한국어](README.ko.md)
 
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/cladex)
+
 Cladex 是一个遥控器，用 Even G2 眼镜查看并控制在你自己的电脑上工作的 AI 智能体。
 
 - 你在每台运行 AI 智能体的电脑上安装一个程序。它是带有自己窗口的 Mac 应用。
@@ -18,11 +20,11 @@ Cladex 是一个遥控器，用 Even G2 眼镜查看并控制在你自己的电�
 Install Cladex on this computer. Read https://raw.githubusercontent.com/vsiioky/cladex/main/AGENT-INSTALL.md and follow it step by step. Stop and ask me where it says so. Answer me in Simplified Chinese.
 ```
 
-智能体会从这个仓库下载 Cladex，完成设置，并自行把你的智能体和手机连起来。遇到只有你才能继续的地方，它会停下来询问：登录 Tailscale、把电脑的地址开放到互联网（操作之前会先问你）、Hermes 和 OpenClaw（需要你同意）、语音密钥（你在隐藏输入的提示里自己输入，绝不会写进聊天）、Claude 应用里的调度器，以及手机上的配对码。它从不使用管理员权限。
+智能体会从这个仓库下载 Cladex，完成设置，并自行把你的智能体和手机连起来。遇到只有你才能继续的地方，它会停下来询问：登录 Tailscale、���电脑的地址开放到互联网（操作之前会先问你）、Hermes 和 OpenClaw（需要你同意）、语音密钥（你在隐藏输入的提示里自己输入，绝不会写进聊天）、Claude 应用里的调度器，以及手机上的配对码。它从不使用管理员权限。
 
 请先阅读 [AGENT-INSTALL.md](AGENT-INSTALL.md)：它很短，智能体正是照着它来做。对于无法访问互联网的智能体，可以直接把这个文件交给它，而不是给它地址。
 
-## 你需要准备什么
+## 你需要��备什么
 
 - 搭载 Apple 芯片（M1 或更新）的 Mac，系统为 macOS 15 或更新。Linux 和 Windows 是没有窗口的预览版（见“安装”）；搭载 Intel 芯片的 Mac 目前还没有安装包。
 - 一个个人使用的免费 Tailscale 账号（tailscale.com/download/mac）。它为电脑提供互联网上的地址。手机上不需要安装 Tailscale。
@@ -47,9 +49,9 @@ curl -fsSL https://github.com/vsiioky/cladex/releases/latest/download/install.sh
 
 接下来你会看到：Cladex 的窗口会打开，一步一步带你完成首次设置（见下面一节）。
 
-脚本做了什么：下载磁盘映像，检查它的校验和、签名以及 Apple 的公证，把 Cladex.app 复制到“应用程序”，关闭映像，然后打开 Cladex。检查全部通过之前，它不会改动任何东西。如果 /Applications 不可写，它会改用你主目录里的 Applications 文件夹，并告诉你。如果 Cladex 正在运行，它会请你先退出。选项：`--no-open`、`--dir <folder>`、`--help`（写在命令行后面：`| sh -s -- --no-open`）。
+脚本做了什么：下载磁盘映像，检查它的校验和、签名以及 Apple 的公证，把 Cladex.app 复制到“应用程序”，关闭映像，然��打开 Cladex。检查全部通过之前，它不会改动任何东西。如果 /Applications 不可写，它会改用你主目录里的 Applications 文件夹，并告诉你。如果 Cladex 正在运行，它会请你先退出。选项：`--no-open`、`--dir <folder>`、`--help`（写在命令行后面：`| sh -s -- --no-open`）。
 
-手动安装：打开 https://github.com/vsiioky/cladex/releases，下载 cladex-arm64.dmg，打开它，把 Cladex 拖到“应用程序”，然后从那里打开。同一页面上的 SHA256SUMS 可用来核对校验和（`shasum -a 256 cladex-arm64.dmg`）。
+手动安装：打开 https://github.com/vsiioky/cladex/releases，下载 cladex-arm64.dmg，打开它，把 Cladex 拖到“应用程序”，然后从那里打开。同一���面上的 SHA256SUMS 可用来核对校验和（`shasum -a 256 cladex-arm64.dmg`）。
 
 状态：已在真实的 Mac 上用该版本已签名并经过公证的磁盘映像验证。
 
@@ -71,7 +73,7 @@ curl -fsSL https://github.com/vsiioky/cladex/releases/latest/download/install.sh
 
 接下来你会看到：没有窗口。脚本把 Cladex 放在 ~/.g2-claude 下，把 `cladex` 命令加入你的路径，并启动 `cladex setup`，它会在终端里提问。结束后，依次运行这些命令：`cladex gateway init`，然后 `cladex gateway publish`，再 `cladex pair`（它会打印电脑的地址和一个配对码）。如果只想安装，在 `| sh -s --` 后面加上 `--no-setup`。它需要 curl、tar、gzip 和 xz（软件包 xz-utils），从不使用 sudo，并会自己下载 Node.js 22 并检查其校验和。
 
-状态：预览版。已在 Debian 容器（arm64）里测试：安装、`cladex --version` 和 `cladex setup --print`。尚未在真实的 Linux 电脑、真实的服务（systemd）、Tailscale 或智能体上测试。
+状态：预览版。已在 Debian 容器（arm64）里测试：安装、`cladex --version` 和 `cladex setup --print`。尚未在真实的 Linux 电脑、真实的服务（systemd）、Tailscale ��智能体上测试。
 
 ### Windows 10 和 11，预览版
 
@@ -87,17 +89,17 @@ irm https://github.com/vsiioky/cladex/releases/latest/download/install.ps1 | iex
 
 接下来你会看到：不会出现 Cladex 的窗口。脚本把 Cladex 放在你的用户文件夹下（.g2-claude），把它的命令文件夹加入你用户的路径，并启动 `cladex setup`，它会在 PowerShell 里提问。结束后运行：`cladex gateway init`，然后 `cladex gateway publish`，再 `cladex pair`。如果只想安装，在运行那一行之前先设置 `$env:CLADEX_NO_SETUP = '1'`。不使用管理员权限。
 
-状态：预览版。脚本只经过人工阅读和静态测试：还没有在真实的 Windows 电脑上运行过，而且在编写它的那台机器上，PowerShell 也没有解析过它。
+状态：预览版。脚本只经过人工阅读和静态测试：还没有在真实的 Windows 电��上运行过，而且在编写它的那台机器上，PowerShell 也没有解析过它。
 
 ## 首次设置
 
 在 Mac 上，Cladex 的窗口会指出每一步；在 Linux 和 Windows 上，由终端里的 `cladex setup` 和 `cladex status` 指出。简要如下：
 
 1. 打开 Cladex。阅读安装计划，回答它的那一个问题。你回答之前不会有任何改动。
-2. 安装 Tailscale（tailscale.com/download/mac），打开并登录。如果电脑的名称里有你自己的名字，请给电脑改名。
+2. 安装 Tailscale（tailscale.com/download/mac），打开并登录。如果电脑的名称里有你自己的名字，请给电脑改��。
 3. 在浏览器里打开 Tailscale 的页面：打开 MagicDNS 和“Enable HTTPS”（console.tailscale.com/admin/dns），并把 Funnel 加入策略（console.tailscale.com/admin/acls）。
 4. 在 Cladex 里点“发布地址”，并记下电脑的地址。它的形式类似 name.tailnet.ts.net，最多可能需要 10 分钟才会出现在互联网上。
-5. 安装上面列表中的一个 AI 智能体并登录。Cladex 不会安装其他程序，点“重新检查”后会自己找到智能体。对于 Claude Code，窗口里还会出现一次性的调度器步骤。
+5. 安装上面列表中的一个 AI 智能体并登录。Cladex 不会安装其他程序，点“重新检查”后会自己找到智能体。对��� Claude Code，窗口里还会出现一次性的调度器步骤。
 6. 语音是可选的，需要你自己的 ElevenLabs（elevenlabs.io/app/settings/api-keys）或 OpenAI（platform.openai.com/api-keys）密钥。把它粘贴到 Cladex 的设置里。
 
 ## 眼镜应用
@@ -108,7 +110,7 @@ irm https://github.com/vsiioky/cladex/releases/latest/download/install.ps1 | iex
 
 1. 在电脑上的 Cladex 里点“配对手机”：会出现电脑的地址和一个 8 位配对码。
 2. 在手机上 Even 应用里的 Cladex 应用中输入地址和配对码，然后输入电脑上显示的 3 位数字。
-3. 戴上眼镜。如果显示“没有电脑”，点一下眼镜的屏幕：列表会重新检查。
+3. 戴上眼镜。如��显示“没有电脑”，点一下眼镜的屏幕：列表会重新检查。
 
 ## 更新
 

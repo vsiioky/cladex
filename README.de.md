@@ -2,6 +2,8 @@
 
 [English](README.md) | [Русский](README.ru.md) | **Deutsch** | [Français](README.fr.md) | [Español](README.es.md) | [Italiano](README.it.md) | [简体中文](README.zh-Hans.md) | [繁體中文](README.zh-Hant.md) | [日本語](README.ja.md) | [한국어](README.ko.md)
 
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/cladex)
+
 Cladex ist eine Fernbedienung für die KI-Agenten, die auf Ihren eigenen Computern arbeiten, angezeigt auf der Even G2 Brille.
 
 - Sie installieren ein Programm auf jedem Computer, auf dem Ihre KI-Agenten arbeiten. Es ist eine Mac-App mit eigenem Fenster.
@@ -49,7 +51,7 @@ Was Sie danach sehen: Das Cladex-Fenster öffnet sich und führt Sie Schritt fü
 
 Was das Skript tut: Es lädt das Festplattenabbild herunter, prüft dessen Prüfsumme, dessen Signatur und dessen Notarisierung durch Apple, kopiert Cladex.app in Programme, wirft das Abbild aus und öffnet Cladex. Bis die Prüfungen bestanden sind, ändert es nichts. Wenn /Applications nicht beschreibbar ist, nimmt es den Ordner Programme in Ihrem Home-Ordner und sagt das. Läuft Cladex gerade, bittet es Sie, das Programm zuerst zu beenden. Optionen: `--no-open`, `--dir <folder>`, `--help` (nach der Zeile: `| sh -s -- --no-open`).
 
-Von Hand: Öffnen Sie https://github.com/vsiioky/cladex/releases, laden Sie cladex-arm64.dmg herunter, öffnen Sie die Datei, ziehen Sie Cladex in Programme und öffnen Sie es von dort. Auf derselben Seite liegt SHA256SUMS zum Vergleich der Prüfsumme (`shasum -a 256 cladex-arm64.dmg`).
+Von Hand: Öffnen Sie https://github.com/vsiioky/cladex/releases, laden Sie cladex-arm64.dmg herunter, öffnen Sie die Datei, ziehen Sie Cladex in Programme und öffnen Sie es von dort. Auf derselben Seite liegt SHA256SUMS zum Vergleich der Pr��fsumme (`shasum -a 256 cladex-arm64.dmg`).
 
 Status: geprüft auf einem echten Mac mit dem signierten und notarisierten Festplattenabbild des Releases.
 

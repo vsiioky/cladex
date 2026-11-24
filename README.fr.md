@@ -2,6 +2,8 @@
 
 [English](README.md) | [Русский](README.ru.md) | [Deutsch](README.de.md) | **Français** | [Español](README.es.md) | [Italiano](README.it.md) | [简体中文](README.zh-Hans.md) | [繁體中文](README.zh-Hant.md) | [日本語](README.ja.md) | [한국어](README.ko.md)
 
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/cladex)
+
 Cladex est une télécommande pour les agents d’IA qui travaillent sur vos propres ordinateurs, affichée sur les lunettes Even G2.
 
 - Vous installez un programme sur chaque ordinateur où travaillent vos agents d’IA. C’est une application Mac avec sa propre fenêtre.

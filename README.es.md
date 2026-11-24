@@ -2,6 +2,8 @@
 
 [English](README.md) | [Русский](README.ru.md) | [Deutsch](README.de.md) | [Français](README.fr.md) | **Español** | [Italiano](README.it.md) | [简体中文](README.zh-Hans.md) | [繁體中文](README.zh-Hant.md) | [日本語](README.ja.md) | [한국어](README.ko.md)
 
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/cladex)
+
 Cladex es un mando a distancia para los agentes de IA que trabajan en sus propios equipos, mostrado en las gafas Even G2.
 
 - Usted instala un programa en cada equipo donde trabajan sus agentes de IA. Es una aplicación de Mac con su propia ventana.
