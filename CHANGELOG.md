@@ -1,13 +1,20 @@
 # Changelog
 
-What changed in each version of Cladex, newest first. [Russian](CHANGELOG.ru.md)
+What changed in each version of Cladex, newest first.
+
+## 0.1.8 - 2026-11-25
+
+- Refreshing Codex models needs just one click, keeping custom models and a backup, without restarting sessions.
+- Full is available by default for Codex sessions started from the phone and glasses.
+- The installer reports a missing download even when the system download tool returns success.
 
 ## 0.1.7 - 2026-11-25
 
 - What is new is shown in English in every language of the program, without markup.
-- The Codex card can refresh the model list from Codex's saved catalog, keeping custom models and a backup, without restarting running sessions.
-- Full access from the phone can be allowed or blocked in the Codex card. Allowing it asks for the owner's confirmation.
-- Turning on the ChatGPT connection in Settings restores its login item if macOS disabled it. After restarting ChatGPT, you can continue the same local Codex chat on the Mac and the glasses.
+- The Codex card can refresh its model list, keeping custom models and a backup, without restarting sessions.
+- The Codex card can allow or block Full from the phone, with confirmation before allowing it.
+- Turning on the ChatGPT connection restores its login item if macOS disabled it.
+- After restarting ChatGPT, you can continue the same local Codex chat on the Mac and glasses.
 
 ## 0.1.6 - 2026-11-24
 
