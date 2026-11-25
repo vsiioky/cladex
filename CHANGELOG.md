@@ -2,6 +2,10 @@
 
 What changed in each version of Cladex, newest first.
 
+## 0.1.9 - 2026-11-25
+
+- The Codex permission picker shows full in every language. Update the Even Hub app to 0.4.15 to see it.
+
 ## 0.1.8 - 2026-11-25
 
 - Refreshing Codex models needs just one click, keeping custom models and a backup, without restarting sessions.
