@@ -2,6 +2,11 @@
 
 What changed in each version of Cladex, newest first.
 
+## 0.1.10 - 2026-11-25
+
+- On Mac, Cladex switches an existing ChatGPT connection to the shared Codex service automatically when Codex is ready. After updating, quit and reopen ChatGPT once. Later Cladex updates keep that connection open.
+- Updating the Mac service avoids a second restart when the new version is already running.
+
 ## 0.1.9 - 2026-11-25
 
 - The Codex permission picker shows full in every language. Update the Even Hub app to 0.4.15 to see it.
